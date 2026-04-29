@@ -1,0 +1,47 @@
+<svg width="1280" height="260" viewBox="0 0 1280 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-dark" x1="0" y1="0" x2="1280" y2="260" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#050816"/>
+      <stop offset="0.5" stop-color="#0B1022"/>
+      <stop offset="1" stop-color="#12061C"/>
+    </linearGradient>
+    <linearGradient id="snake-dark" x1="80" y1="210" x2="1200" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00F7FF"/>
+      <stop offset="0.5" stop-color="#00B8FF"/>
+      <stop offset="1" stop-color="#FF2BD6"/>
+    </linearGradient>
+    <pattern id="grid-dark" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1A2340" stroke-width="1"/>
+    </pattern>
+    <filter id="glow-dark" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="260" rx="26" fill="url(#bg-dark)"/>
+  <rect x="18" y="18" width="1244" height="224" rx="18" stroke="#00F7FF" stroke-opacity="0.18" stroke-width="2"/>
+  <rect width="1280" height="260" rx="26" fill="url(#grid-dark)" opacity="0.55"/>
+
+  <path d="M70 205C118 205 126 136 184 136C243 136 247 207 303 207C360 207 363 96 426 96C489 96 489 182 547 182C605 182 617 64 682 64C745 64 746 186 811 186C875 186 885 102 944 102C1005 102 1004 164 1063 164C1123 164 1140 72 1210 72" stroke="url(#snake-dark)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow-dark)" stroke-dasharray="220 1480">
+    <animate attributeName="stroke-dashoffset" values="0;-850" dur="4.2s" repeatCount="indefinite"/>
+    <animate attributeName="stroke-dasharray" values="180 1520;280 1420;180 1520" dur="4.2s" repeatCount="indefinite"/>
+  </path>
+
+  <circle cx="1210" cy="72" r="7" fill="#FF2BD6" filter="url(#glow-dark)">
+    <animate attributeName="r" values="7;10;7" dur="1.2s" repeatCount="indefinite"/>
+  </circle>
+
+  <g opacity="0.9">
+    <text x="80" y="82" fill="#F8FBFF" font-family="Orbitron, Arial, sans-serif" font-size="24" font-weight="700">NEON CONTRIBUTION SNAKE</text>
+    <text x="80" y="114" fill="#8BA0C7" font-family="Rajdhani, Arial, sans-serif" font-size="18" font-weight="600">live activity trail syncing through the grid</text>
+  </g>
+
+  <g opacity="0.8">
+    <rect x="1010" y="180" width="178" height="32" rx="16" fill="#111A31" stroke="#FF2BD6" stroke-opacity="0.35"/>
+    <text x="1034" y="201" fill="#F7B801" font-family="Rajdhani, Arial, sans-serif" font-size="16" font-weight="700">STATUS // ACTIVE</text>
+  </g>
+</svg>
